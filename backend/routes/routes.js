@@ -20,14 +20,14 @@ const newUserData = async (decodedValue,req,res)=>{
     //  Saving the data
     
         try{
-            const savedUser = await newIser.save();
+            const savedUser = await newUser.save();
             res.status(200).send({user: savedUser});
         }
         catch(error){
             res.status(400).send({success:false,msg: error});
         }
 
-        
+
 };
 
 
