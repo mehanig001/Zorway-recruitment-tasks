@@ -3,9 +3,9 @@ const users = require('../models/Users');
 const router=require('express').Router();
 
 
-const newAdminData=require('../controllers/newAdmin');
 const loginAdmin=require('../controllers/loginAdmin');
 const loginStudent=require('../controllers/loginStudent');
+const updateDetails = require('../controllers/updateDetails');
 
 
 // Logging in Admin
@@ -21,9 +21,22 @@ router.post("/student/login",loginStudent);
 
 
 
+
+
+
+
+router.patch('/update',updateDetails)
+
+
+
+
+
+
+
+
 router.get('/',(req,res)=>{
-    console.log("hellp");
-    res.send("hello");
+    console.log("Hello World");
+    res.send("Hello World");
 });
 
 
