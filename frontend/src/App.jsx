@@ -26,6 +26,9 @@ export default function App() {
         const data = await res.json();
         console.log(data);
       }
+      else{
+        setAuth(false);
+      }
     })
     .catch((error)=>{
       console.log("failed to Authenticate",error);
@@ -46,6 +49,9 @@ export default function App() {
         );
         const data = await res.json();
         console.log(data);
+      }
+      else{
+        setAuth(false);
       }
     })
     .catch((error)=>{
