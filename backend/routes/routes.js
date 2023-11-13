@@ -58,7 +58,7 @@ router.patch('/update',updateDetails);
 router.patch('/attendance/insert',takeAttendance);
 
 
-
+// 1 2 3 Check!!!
 
 router.get('/',(req,res)=>{
     console.log("Hello World");

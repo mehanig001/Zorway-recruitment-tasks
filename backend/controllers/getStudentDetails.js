@@ -1,5 +1,5 @@
 const users = require('../models/Users');
-
+const attendance = require('../models/Attendance')
 
 const getStudentDetails = async(req,res)=>{
     try{
