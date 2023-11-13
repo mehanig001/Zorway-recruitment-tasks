@@ -15,13 +15,19 @@ const takeAttendance = async (req,res)=>{
         return res.status(500).json({success:false,msg:"Students cannot take attendance"});
     }
     present.map(async(id)=>{
-        users.updateOne({userId:id},{$inc:{attendance:1}})
-        .then(()=>{
-            res.send(200).send({msg:"success"});
-        })
-        .catch(error=>{
-            res.send(500).json({success:false,msg:"An error accured during update ",error});
-        });
+        // Incrementing attandance of present students
+
+        await users.updateOne({userId:id},{$inc:{attendance:1}});
+
+
+        // .then(()=>{
+        //     res.status(200).send("success");
+        // })
+        // .catch(()=>{
+        //     res.status(500).send({success:false,msg:"An error accured during update "});
+        // });
+
+        
     });
     const newAttendance=new attendance({
         date:date,
