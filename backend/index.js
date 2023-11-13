@@ -6,7 +6,7 @@ dotenv.config();
 const morgan =require("morgan");
 const bodyParser = require('body-parser');
 const cors =require('cors');
-
+const counter=require('./models/AttendanceCounter');
 const app=express();
 app.get('/',(req,res)=>{
     res.send("<H1>Hey There, I'm Here</H1>")
@@ -20,6 +20,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 
 app.use("/api/users",route);
+
 mongoose
 .connect(process.env.MONGO_URL)
 .then(()=>{
@@ -28,6 +29,7 @@ mongoose
 .catch(()=>{
     console.log("Not Connencted to MONGOOSE");
 })
+
 
 
 app.listen(8080,()=>{

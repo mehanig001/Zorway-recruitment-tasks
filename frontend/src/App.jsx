@@ -64,7 +64,7 @@ export default function App() {
         <BrowserRouter>
         <Routes>
             <Route path="/" element={
-              <>
+              <>  
                   <div className='min-h-screen flex justify-center items-center gap-2 bg-violet-800'>
                     <div className='p-10 rounded-3xl bg-orange-400 flex flex-col gap-8 text-center'>
                       <h1 className='font-black text-cyan-900 text-lg'>Admin Login</h1>
