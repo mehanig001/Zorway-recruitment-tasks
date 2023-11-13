@@ -22,7 +22,7 @@ const updateDetails = async (req,res)=>{
         return res.status(500).json({success:false,msg:"Invalid Target User Id"});
     }
 
-    // students can only update their own details nothing else
+    // students can only update their own details not of others
 
     if(current.role==="student"){
         if(id===userid){
