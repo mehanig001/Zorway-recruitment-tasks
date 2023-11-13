@@ -15,6 +15,7 @@ const getStudentDetails = require('../controllers/getStudentDetails');
 const getAdminDetails = require('../controllers/getAdminDetails');
 const getAllAdmins = require('../controllers/getAllAdmins');
 const getAllStudents = require('../controllers/getAllStudents');
+const insertTimeTable = require('../controllers/insertTimeTable');
 
 
 // Logging in Admin
@@ -56,6 +57,12 @@ router.patch('/update',updateDetails);
 // Insert attendance
 
 router.patch('/attendance/insert',takeAttendance);
+
+
+// Insert time table
+
+router.post('/timetable/insert',insertTimeTable);
+
 
 
 // 1 2 3 Check!!!
