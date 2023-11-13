@@ -12,10 +12,9 @@ const loginAdmin = async (req, res) => {
   }
 
 
-
+  // Retrieve token 
+  
   const token = req.headers.authorization.split(" ")[1];
-
-
   try {
     // Decoding the data from token sent by firebase as userCredentials
 

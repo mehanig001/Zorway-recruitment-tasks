@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const attendanceSchema = mongoose.Schema(
     {
         date:{
-            type:Date,
+            type:String,
             required:true
         },
         present:{
@@ -14,7 +14,8 @@ const attendanceSchema = mongoose.Schema(
             type:[String],
             default:[]
         }
-    }
+    },
+    { timestamps: true}
 );
 
-module.exports= mongoose.model("timetable",timeTable);
+module.exports= mongoose.model("attendance",attendanceSchema);

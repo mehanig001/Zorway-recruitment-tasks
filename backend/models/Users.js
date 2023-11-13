@@ -25,6 +25,10 @@ const userSchema = mongoose.Schema(
             type:String,
             required:true
         },
+        attendance:{
+            type:Number,
+            default:0
+        }
     },
     { timestamps: true}
 );

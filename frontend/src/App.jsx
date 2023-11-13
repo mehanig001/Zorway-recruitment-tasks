@@ -19,7 +19,7 @@ export default function App() {
         const res = await fetch(
           `http://localhost:8080/api/users/admin/login`,
           {
-            method: "GET",
+            method: "POST",
             headers: { Authorization: `Bearer ${token}` },
           }
         );
