@@ -16,6 +16,7 @@ export default function App() {
       if(userCred){
         setAuth(true);
         const token = await firebaseAuth.currentUser.getIdToken();
+        console.log(token);
         const res = await fetch(
           `http://localhost:8080/api/users/admin/login`,
           {
